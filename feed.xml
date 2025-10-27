@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Babyschwimmen Gehrden</title>
+    <link href="https://chrudat.github.io/bsg/feed.xml" rel="self" />
+    <link href="https://chrudat.github.io/bsg" />
+    <updated>1970-01-01T01:00:00+01:00</updated>
+    <author>
+        <name>jn</name>
+    </author>
+    <id>https://chrudat.github.io/bsg</id>
+
+</feed>

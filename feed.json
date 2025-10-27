@@ -1,0 +1,14 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Babyschwimmen Gehrden",
+    "description": "",
+    "home_page_url": "https://chrudat.github.io/bsg",
+    "feed_url": "https://chrudat.github.io/bsg/feed.json",
+    "user_comment": "",
+    "icon": "https://chrudat.github.io/bsg/media/website/logo.gif",
+    "author": {
+        "name": "jn"
+    },
+    "items": [
+    ]
+}
