@@ -757,7 +757,15 @@ ul.contact li a {
 
 table {
   margin: 0 0 2em 0;
+  vertical-align: top;
+  text-align: left;
   width: 100%;
+}
+@media screen and (max-width: 736px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
 }
 table tbody tr {
   border: solid 1px rgba(210, 215, 217, 0.75);
@@ -1468,12 +1476,12 @@ sup {
   margin-right: 1em;
 }
 .post__video, .post__iframe {
-  position: relative;
   display: block;
   margin-top: 2.5em;
   margin-bottom: 2.5em;
   overflow: hidden;
   padding: 0;
+  position: relative;
   width: 100%;
 }
 @media screen and (max-width: 736px) {
@@ -1487,7 +1495,13 @@ sup {
   content: "";
   padding-top: var(--embed-aspect-ratio);
 }
-.post__video iframe, .post__video video, .post__iframe iframe, .post__iframe video {
+.post__video iframe[height*="%"][width*="%"],
+.post__video video[height*="%"][width*="%"],
+.post__video iframe[height]:not([height*="%"])[width]:not([width*="%"]),
+.post__video video[height]:not([height*="%"])[width]:not([width*="%"]), .post__iframe iframe[height*="%"][width*="%"],
+.post__iframe video[height*="%"][width*="%"],
+.post__iframe iframe[height]:not([height*="%"])[width]:not([width*="%"]),
+.post__iframe video[height]:not([height*="%"])[width]:not([width*="%"]) {
   border: none;
   height: 100%;
   left: 0;
@@ -1495,6 +1509,9 @@ sup {
   top: 0;
   bottom: 0;
   width: 100%;
+}
+.post__video:has(iframe:not([height]))::before, .post__video:has(iframe:not([width]))::before, .post__video:has(video:not([height]))::before, .post__video:has(video:not([width]))::before, .post__iframe:has(iframe:not([height]))::before, .post__iframe:has(iframe:not([width]))::before, .post__iframe:has(video:not([height]))::before, .post__iframe:has(video:not([width]))::before {
+  display: none;
 }
 
 .comments-area {
@@ -1769,29 +1786,6 @@ sup {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-}
-
-.pswp--dark .pswp__bg {
-  background: black;
-}
-.pswp--dark .pswp__button,
-.pswp--dark .pswp__button--arrow--left:before,
-.pswp--dark .pswp__button--arrow--right:before {
-  background-image: url(../svg/gallery-icons-light.svg);
-}
-.pswp--light .pswp__bg {
-  background: white;
-}
-.pswp--light .pswp__counter {
-  color: black;
-}
-.pswp--light .pswp__caption__center {
-  color: #6e767c;
-}
-.pswp--light .pswp__button,
-.pswp--light .pswp__button--arrow--left:before,
-.pswp--light .pswp__button--arrow--right:before {
-  background-image: url(../svg/gallery-icons-dark.svg);
 }
 
 hr,
